@@ -22,7 +22,7 @@ cc.Class({
 			default: null,
 			type: Player
 		},
-		// label 引用
+		// label 引用 分数板
 		scoreDisplay: {
 			default: null,
 			type: cc.Label
@@ -31,6 +31,16 @@ cc.Class({
 		scoreAudio: {
 			default: null,
 			type: cc.AudioClip
+		},
+		// play 按钮
+		playBtn: {
+			default: null,
+			type: cc.Node
+		},
+		// gameOver 标签
+		gameOverNode: {
+			default: null,
+			type: cc.Node
 		}
 	},
 
@@ -45,12 +55,15 @@ cc.Class({
 		// 初始化计时器
 		this.timer = 0;
 		this.starDuration = 0;
-		// 生成一个新的星星
+		// // 生成一个新的星星
 		// this.spawnNewStar();
 		// 初始化计分
 		this.score = 0;
 
 		this.enabled = false; // 是否每帧执行该组件的 update 方法，同时也用来控制渲染组件是否显示
+
+		// play 按钮显示
+		this.playBtn.active = true;
 
 		// 初始化星星
 		this.starPool = new cc.NodePool('Star')
@@ -62,9 +75,11 @@ cc.Class({
 		this.resetScore();
 
 		this.enabled = true;
-
+		this.gameOverNode.active = false;
+		this.playBtn.active = false;
+		// 重置 player 位置
 		this.player.startMoveAt(cc.v2(0, this.groundY));
-		// spawn star
+		// 生成新星星
 		this.spawnNewStar();
 
 	},
@@ -143,6 +158,9 @@ cc.Class({
 	gameOver() {
 		// this.player.stopAllActions(); // 停止 player 节点的跳跃
 		// cc.director.loadScene('game'); // 游戏失败时重新加载场景
+		this.gameOverNode.active = true;
+		this.playBtn.active = true;
+		this.player.enabled = false;
 		this.player.stopMove();
 		this.currentStar.destroy();
 		console.log('game over')
