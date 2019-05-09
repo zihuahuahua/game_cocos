@@ -62,6 +62,10 @@ window.__require = function e(t, n, r) {
         gameOverNode: {
           default: null,
           type: cc.Node
+        },
+        InstrControl: {
+          default: null,
+          type: cc.Label
         }
       },
       onLoad: function onLoad() {
@@ -74,6 +78,7 @@ window.__require = function e(t, n, r) {
         this.enabled = false;
         this.playBtn.active = true;
         this.starPool = new cc.NodePool("Star");
+        cc.sys.platform === cc.sys.WECHAT_GAME ? this.InstrControl.string = "\u5de6\u8fb9\u957f\u6309\uff1a\u5411\u5de6\u52a0\u901f\n\u53f3\u8fb9\u957f\u6309\uff1a\u5411\u53f3\u52a0\u901f" : console.log(this.InstrControl.string, "==");
       },
       onGameStart: function onGameStart() {
         this.resetScore();

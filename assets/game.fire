@@ -1073,6 +1073,9 @@
     "gameOverNode": {
       "__id__": 22
     },
+    "InstrControl": {
+      "__id__": 17
+    },
     "_id": "ceo2Zksh9BipYrSS1QunZh"
   }
 ]

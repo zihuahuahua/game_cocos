@@ -83,10 +83,10 @@
           "__id__": 11
         },
         {
-          "__id__": 12
+          "__id__": 13
         },
         {
-          "__id__": 13
+          "__id__": 14
         }
       ],
       "_level": 1,
@@ -120,10 +120,13 @@
             "__uuid__": "550RC5urZNnZQWA+RpBPo1"
           },
           "playBtn": {
-            "__id__": 12
+            "__id__": 13
           },
           "gameOverNode": {
-            "__id__": 13
+            "__id__": 14
+          },
+          "InstrControl": {
+            "__id__": 12
           }
         }
       ],
@@ -388,17 +391,7 @@
       "_level": 2,
       "_components": [
         {
-          "__type__": "cc.Label",
-          "node": {
-            "__id__": 11
-          },
-          "_srcBlendFactor": 1,
-          "_useOriginalSize": false,
-          "_string": "A / ←：向左加速\nD / →：向右加速",
-          "_N$string": "A / ←：向左加速\nD / →：向右加速",
-          "_fontSize": 32,
-          "_N$horizontalAlign": 1,
-          "_N$verticalAlign": 1
+          "__id__": 12
         }
       ],
       "_contentSize": {
@@ -419,6 +412,19 @@
       }
     },
     {
+      "__type__": "cc.Label",
+      "node": {
+        "__id__": 11
+      },
+      "_srcBlendFactor": 1,
+      "_useOriginalSize": false,
+      "_string": "A / ←：向左加速\nD / →：向右加速",
+      "_N$string": "A / ←：向左加速\nD / →：向右加速",
+      "_fontSize": 32,
+      "_N$horizontalAlign": 1,
+      "_N$verticalAlign": 1
+    },
+    {
       "__type__": "cc.Node",
       "_name": "BtnStart",
       "_parent": {
@@ -429,7 +435,7 @@
         {
           "__type__": "cc.Sprite",
           "node": {
-            "__id__": 12
+            "__id__": 13
           },
           "_spriteFrame": {
             "__uuid__": "f7Y1Mih/RNOpUGfLoWzT8m"
@@ -438,7 +444,7 @@
         {
           "__type__": "cc.Button",
           "node": {
-            "__id__": 12
+            "__id__": 13
           },
           "clickEvents": [
             {
@@ -451,7 +457,7 @@
             }
           ],
           "_N$target": {
-            "__id__": 12
+            "__id__": 13
           }
         }
       ],
@@ -483,7 +489,7 @@
         {
           "__type__": "cc.Label",
           "node": {
-            "__id__": 13
+            "__id__": 14
           },
           "_useOriginalSize": false,
           "_string": "Game Over",

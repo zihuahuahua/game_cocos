@@ -47,6 +47,10 @@ cc.Class({
 		gameOverNode: {
 			default: null,
 			type: cc.Node
+		},
+		InstrControl: {
+			default: null,
+			type: cc.Label
 		}
 	},
 
@@ -73,6 +77,16 @@ cc.Class({
 
 		// 初始化星星
 		this.starPool = new cc.NodePool('Star');
+
+		// 判断是否是小游戏
+		// console.log(cc.sys.platform,'cc.sys.platform',cc.sys.WECHAT_GAME) 
+		if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+			// this.InstrControl.active = false
+			this.InstrControl.string = '左边长按：向左加速\n右边长按：向右加速';
+		} else {
+			// this.InstrControl.active = true
+			console.log(this.InstrControl.string, '==');
+		}
 	},
 
 	// 开始游戏
