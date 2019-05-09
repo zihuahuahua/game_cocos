@@ -43,12 +43,22 @@ cc.Class({
 		// 初始化键盘输入监听
 		cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
 		cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+
+		// 初始化触摸事件监听
+		var touchReceiver = cc.Canvas.instance.node;
+		touchReceiver.on('touchstart', this.onTouchStart, this);
+		touchReceiver.on('touchend', this.onTouchEnd, this);
 	},
 
 	onDestroy() {
 		// 取消键盘输入监听
 		cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
 		cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+
+		// 取消触摸事件监听
+		var touchReceiver = cc.Canvas.instance.node;
+		touchReceiver.off('touchstart', this.onTouchStart, this);
+		touchReceiver.off('touchend', this.onTouchEnd, this);
 	},
 
 	onKeyDown(event) {
@@ -85,8 +95,9 @@ cc.Class({
 	},
 
 	onTouchStart(event) {
+		// console.log(event, 'event')
 		var touchLoc = event.getLocation();
-		console.log(touchLoc,'touchLoc')
+		// console.log(touchLoc, 'touchLoc')
 		if (touchLoc.x >= cc.winSize.width / 2) {
 			this.accLeft = false;
 			this.accRight = true;
@@ -155,11 +166,11 @@ cc.Class({
 		this.node.x += this.xSpeed * dt
 
 		// 限制 player 在屏幕内移动
-		if(this.node.x>=this.node.parent.width/2){
-			this.node.x = this.node.parent.width/2
+		if (this.node.x >= this.node.parent.width / 2) {
+			this.node.x = this.node.parent.width / 2
 			this.xSpeed = 0;
-		}else if (this.node.x<-this.node.parent.width/2){
-			this.node.x = -this.node.parent.width/2
+		} else if (this.node.x < -this.node.parent.width / 2) {
+			this.node.x = -this.node.parent.width / 2
 			this.xSpeed = 0;
 		}
 	},
