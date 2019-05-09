@@ -719,7 +719,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 183.11,
+      "width": 241.78,
       "height": 80
     },
     "_anchorPoint": {
@@ -765,8 +765,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "A：向左加速\nD：向右加速",
-    "_N$string": "A：向左加速\nD：向右加速",
+    "_string": "A / ←：向左加速\nD / →：向右加速",
+    "_N$string": "A / ←：向左加速\nD / →：向右加速",
     "_fontSize": 32,
     "_lineHeight": 40,
     "_enableWrapText": true,

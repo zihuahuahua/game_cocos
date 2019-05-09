@@ -80,8 +80,8 @@
     "relativePath": "textures\\star.png"
   },
   "3c03c9ec-db0a-448f-9d53-f0ef2c23395c": {
-    "asset": 1557367957283,
-    "meta": 1557367957295,
+    "asset": 1557397842549,
+    "meta": 1557397842564,
     "relativePath": "game.fire"
   },
   "5718ce21-887b-46db-929a-90eaa9021d9c": {
@@ -133,16 +133,6 @@
     "asset": 1537418980000,
     "meta": 1557197743530,
     "relativePath": "image\\default_radio_button_off.png"
-  },
-  "8b06890c-59c3-41b6-aabe-f7b00d351dee": {
-    "asset": 1557210676317,
-    "meta": 1557299084831,
-    "relativePath": "scripts\\Player.js"
-  },
-  "1a915bc6-a866-40f5-9e91-68b2b6b19af2": {
-    "asset": 1557210502339,
-    "meta": 1557210599800,
-    "relativePath": "scripts\\Star.js"
   },
   "4bab67cb-18e6-4099-b840-355f0473f890": {
     "asset": 1537418980000,
@@ -328,5 +318,15 @@
     "asset": 1557367947666,
     "meta": 1557367949704,
     "relativePath": "scripts\\Game.js"
+  },
+  "1a915bc6-a866-40f5-9e91-68b2b6b19af2": {
+    "asset": 1557392935822,
+    "meta": 1557397421807,
+    "relativePath": "scripts\\Star.js"
+  },
+  "8b06890c-59c3-41b6-aabe-f7b00d351dee": {
+    "asset": 1557397772998,
+    "meta": 1557397774630,
+    "relativePath": "scripts\\Player.js"
   }
 }
